@@ -167,6 +167,11 @@ header{background:transparent;box-shadow:none;justify-content:flex-end;backdrop-
   .storypics.single img:first-child{height:100%;border-radius:999px}
 }
 
+/* Collection photographs are displayed directly without window overlays */
+.products .pic{cursor:default}
+.products .pic>img{transform:none}
+.products article:hover .pic>img{transform:scale(1.035)}
+
 /* Refined hero, gifting, trust, reviews and location shapes */
 header{border-bottom:0}
 .giftpic span{display:none}

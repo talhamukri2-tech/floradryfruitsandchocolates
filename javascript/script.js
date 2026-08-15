@@ -133,21 +133,6 @@ if ("IntersectionObserver" in window) {
   revealSections.forEach((section) => section.classList.add("is-visible"));
 }
 
-document.querySelectorAll(".window").forEach((windowPanel) => {
-  const toggleWindow = () => {
-    const isOpen = windowPanel.classList.toggle("is-open");
-    windowPanel.setAttribute("aria-expanded", String(isOpen));
-  };
-
-  windowPanel.addEventListener("click", toggleWindow);
-  windowPanel.addEventListener("keydown", (event) => {
-    if (event.key === "Enter" || event.key === " ") {
-      event.preventDefault();
-      toggleWindow();
-    }
-  });
-});
-
 const backToTop = document.getElementById("backToTop");
 const updateBackToTop = () => backToTop.classList.toggle("show", window.scrollY > 520);
 window.addEventListener("scroll", updateBackToTop, { passive: true });
